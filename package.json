@@ -1,0 +1,17 @@
+{
+  "name": "data-doc",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "buttercms": "^1.1.4",
+    "camelcase": "^5.3.1",
+    "fs-extra": "^8.0.1",
+    "gridsome": "^0.6.0",
+    "js-yaml": "^3.13.1",
+    "uuid": "^3.3.2"
+  }
+}

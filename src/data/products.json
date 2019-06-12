@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Monitor"
+  },
+  {
+    "id": 2,
+    "name": "Tv"
+  },
+  {
+    "id": 3,
+    "name": "Game"
+  },
+  {
+    "id": 4,
+    "name": "Mechanical Keyboard"
+  },
+  {
+    "id": 5,
+    "name": "Mouse"
+  }
+]
