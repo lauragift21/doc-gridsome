@@ -5,7 +5,11 @@ class ButterSource {
   static defaultOptions() {
     return {
       authToken: 'bd15d8c5fe3c31340ef10a539eb8a8b5a4de9e97',
-      contentFields: '',
+      contentFields: {
+        keys: [
+          'artist'
+        ]
+      },
       pages: '',
       pageTypes: '',
       typeName: 'Butter'
@@ -63,7 +67,6 @@ class ButterSource {
   async allButterPages(store) {
     const post = await this.client.page.retrieve('*', 'about')
     const { data } = post;
-    console.log(data, '>>>>>>>>>>')
     const contentType = store.addContentType({
       typeName: this.createTypeName('pages')
     });
@@ -73,11 +76,12 @@ class ButterSource {
     STEP THREE: Get all butter collections
   ****************************************************/
   async allButterCollections(store) {
-    const collection = store.addContentType({
+    const data = await this.client.content.retrieve([this.options.contentFields])
+    console.log(JSON.stringify(data));
+    const contentType = store.addContentType({
       typeName: this.createTypeName('collection')
     });
 
-    const data = await this.client.content.retrieve(['artists'])
   }
 
   createTypeName(typeName = '') {
