@@ -6,5 +6,16 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    // {
+    //   use: '~/src/sources',
+    //   options: {
+    //     authToken: 'bd15d8c5fe3c31340ef10a539eb8a8b5a4de9e97',
+    //     contentFields: ['artists'],
+    //     pages: 'content',
+    //     pageTypes: '',
+    //     typeName: 'Butter'
+    //   }
+    // }
+  ]
 }

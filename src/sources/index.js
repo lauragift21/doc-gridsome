@@ -4,7 +4,7 @@ const camelCase = require('camelcase');
 class ButterSource {
   static defaultOptions() {
     return {
-      authToken: 'bd15d8c5fe3c31340ef10a539eb8a8b5a4de9e97',
+      authToken: '',
       contentFields: ['artists'],
       pages: 'content',
       pageTypes: '',
@@ -57,8 +57,8 @@ class ButterSource {
     }
   }
 
-  /****************************************************
-    STEP TWO: Get all butter collections
+   /****************************************************
+    STEP THREE: Get all butter collections
   ****************************************************/
   async allButterCollections(store) {
     const collection = await this.client.content.retrieve(this.options.contentFields)
@@ -74,8 +74,8 @@ class ButterSource {
 
   }
 
-  /****************************************************
-    STEP THREE: Get all butter pages
+     /****************************************************
+    STEP TWO: Get all butter pages
   ****************************************************/
   async allButterPages(store) {
     if (this.options.pages || this.options.pageTypes) {
@@ -106,12 +106,7 @@ class ButterSource {
         });
         contentType.addNode({
           fields: {
-            headline: data.headline,
-            seo_title: data.seo_title,
-            body: data.body,
-            hero_image: data.hero_image,
-            call_to_action: data.call_to_action,
-            customer_logos: data.customer_logos
+
           }
         })
       }
